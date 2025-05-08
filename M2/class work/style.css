@@ -1,0 +1,25 @@
+/*global css*/
+*{
+    font-size:30px;
+    font-weight:100;
+}
+
+/*External css*/
+h3{
+    color:blue;
+}
+h4{
+    color:yellowgreen;
+}
+
+.myclass{
+    color:darkorange;
+}
+#myid{
+    color:mediumpurple;
+}
+
+h5,
+p{
+    color:maroon;
+}
