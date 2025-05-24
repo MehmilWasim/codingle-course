@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Box Model</title>
+        <style>
+            .example1{
+                background-color: antiquewhite;
+                padding:10px 50px 10px 10px;
+                border:10px dashed black;
+                margin:10px;
+            }
+            .example2{
+                background-color: cyan;
+                padding:10px 50px 10px 10px;
+                border:10px dashed gray;
+                margin:10px;
+                width:300px;
+                height: 18px;
+            }
+            #imglionRight{
+                float:right;
+            }
+            #imglionLeft{
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Model Example</h1>
+        <hr style="width:100%; height:2px; background-color:blue">
+        <div class="example1">a direct repetition of 
+            words from a speech or text, typically acknowledged as such</div>
+        <div class="example2">The only thing we have to fear is fear itself.</div>
+        <h2>Characteristics of Lion</h2>
+            <p>
+                <img id="lionRight" src="lion.jpg"
+                alt="lion" style="width:90px;height:100px">
+
+                <img id="lionLeft" src="lion.jpg"
+                alt="lion" style="width:90px;height:100px">
+                 Nearly all wild lions live in Africa, but one 
+                small population exists elsewhere. Male lions 
+                can weigh 30 stone. They hunt during storms. 
+                Lions can get their water from plants.
+            </p>
+    </body>
+</html>
