@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>card,pagination,bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <style>
+            a:hover{
+                 box-shadow: 5px 5px 5px black;
+            }
+            p::first-letter{
+                font-size:200%;
+                color:black;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <title>Card</title>
+    <body>
+        <div class="container mt-5 ml-5">
+            <div class="card" style="width: 250px;">
+                <img class="card-img-top"
+                src="woman.jpg"
+                alt="card image cap">
+                <div class="card-body" style="background-color: bisque;">
+                    <h5 class="card-title">Ms.Catherine D'souza</h5>
+                    <p class="card-text">Meet our one of the best teachers</p>
+
+                    <a href="https://github.com/MehmilWasim/codingle-course" class="btn btn-primary">See Profile</a>    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 style="color: blue; text-decoration: double underline black;">Meet our further tutors</h1>
+            <ul class="pagination">
+
+                <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
