@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input, select, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br>
+    
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">÷</option>
+    </select>
+    <br>
+    
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    
+    
+    <button onclick="calculate()">Calculate</button>
+    
+    <h3 id="result">Result: </h3>
+    
+    <script>
+
+    function calculate() {
+    
+      var number1 = parseFloat(document.getElementById("num1").value);
+      var number2 = parseFloat(document.getElementById("num2").value);
+      var operator = document.getElementById("operator").value;
+      var result;
+
+      
+      if (operator === "+") {
+        result = number1 + number2;
+      } else if (operator === "-") {
+        result = number1 - number2;
+      } else if (operator === "*") {
+        result = number1 * number2;
+      } else if (operator === "/") {
+        if (number2 === 0) {
+          result = "Cannot divide by zero!";
+        } else {
+          result = number1 / number2;
+        }
+      } else {
+        result = "Invalid operator!";
+      }
+
+      
+      document.getElementById("result").innerText = "Result: " + result;
+    }
+  </script>
+
+</body>
+</html>
