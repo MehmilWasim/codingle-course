@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication using Function</title>
+</head>
+<body>
+
+  <h2>Multiply Two Numbers</h2>
+
+  <input type="number" id="value1" placeholder="Enter first number">
+  <input type="number" id="value2" placeholder="Enter second number">
+
+  <button onclick="multiplyNumbers()">Multiply</button>
+
+  <h3 id="output"></h3>
+
+  <script>
+     
+    function multiply(a, b) {
+      return a * b;
+    }
+
+    function multiplyNumbers() {
+      let num1 = parseFloat(document.getElementById("value1").value);
+      let num2 = parseFloat(document.getElementById("value2").value);
+
+      let result = multiply(num1, num2);  
+
+      document.getElementById("output").innerText = "Result: " + result;
+    }
+  </script>
+
+</body>
+</html>
