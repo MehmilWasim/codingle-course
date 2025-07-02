@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Numbers and Date</title>
+</head>
+<body>
+    <h2>Random Numbers, Date, and Rounded Values</h2>
+    <script>
+        
+        var currentDate = new Date();
+        document.write("Current Date: " + currentDate.toDateString() + "<br><br>");
+
+        
+        var randomNumbers = [];
+
+        
+        for (var i = 0; i < 10; i++) {
+            var num = Math.random() * 100; 
+            randomNumbers.push(num);       
+        }
+
+    
+        document.write("<strong>Random Numbers and Rounded Values:</strong><br>");
+        for (var i = 0; i < randomNumbers.length; i++) {
+            var original = randomNumbers[i];
+            var rounded = Math.round(original); 
+            document.write("Original: " + original.toFixed(2) + " | Rounded: " + rounded + "<br>");
+        }
+    </script>
+
+    <h2>JavaScript Reverse loop method</h2>
+    <script>    
+
+        var fruits=["Apple", "Mango", "Banana", "Grape Fruit",
+            "Pomegranate", "Plum", "Avacado"
+        ];
+
+        for (var i = fruits.length - 1; i >= 0; i--) {
+                var text = fruits[i] + '<br>';
+                document.write(text);
+        }
+    </script>
+
+    <h2>JavaScript skip loop method</h2>
+    <script>
+         var fruits=["Apple", "Mango", "Banana", "Grape Fruit",
+            "Pomegranate", "Plum", "Avacado"
+        ];
+
+         for (var i = 0; i < fruits.length; i++) {
+        if (fruits[i] === "Grape Fruit" || fruits[i] === "Banana") {
+          continue;
+        }
+        var text = fruits[i] + "<br>";
+        document.write(text);
+      }
+
+    </script>
+</body>
+</html>
