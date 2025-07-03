@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Finding the sum with the help of Arguments object.</p>
+        <p id="result"></p>
+        <script>
+            function findSum() {
+                var sum = 0;
+                for (var i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }
+                return sum;
+            }
+
+            document.getElementById("result").innerHTML = "Sum is: " + findSum(10, 20, -5, 15, 0);
+        </script>
+    </body>
+</html>
