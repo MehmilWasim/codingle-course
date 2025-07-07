@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object and Array example</title>
+    </head>
+    <body>
+        <h2>JavaScript object and array demo</h2>
+
+        <p id="objectOutput"></p>
+        <p id="arrayOutput"></p>
+        <p id="joinedArray"></p>
+        <p id="poppedValue"></p>
+        <p id="arrayAfterPop"></p>
+
+        <script>
+            let person = {
+                name : "Ali",
+                age : 25,
+                city : "Lahore"
+            };
+
+            let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+            let objectText = "Name:"+person.name+"<br>"+ 
+                            "Age:" +person.age+"<br>"+
+                            "City:" +person["city"];
+            document.getElementById("objectOutput").innerHTML=objectText;
+
+            let arrayText = "First Fruit: " + fruits[0] + "<br>" +
+                            "Second Fruit: " + fruits[1] + "<br>" +
+                            "Third Fruit: " + fruits[2];
+            document.getElementById("arrayOutput").innerHTML = arrayText;
+
+        
+            let joined = fruits.join(", ");
+            document.getElementById("joinedArray").innerHTML = "Joined Array: " + joined;
+
+        
+            let popped = fruits.pop();
+            document.getElementById("poppedValue").innerHTML = "Popped Value: " + popped;
+
+        
+           document.getElementById("arrayAfterPop").innerHTML = "Array After Pop: " + fruits.join(", ");
+
+
+        </script>
+    </body>
+</html>
