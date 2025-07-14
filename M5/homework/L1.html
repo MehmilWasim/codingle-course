@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript while loop</h2>
+        <p><strong>Prime Numbers:</strong></p>
+        <p id="primeNumbers"></p>
+
+        <p><strong>Random Numbers:</strong></p>
+        <p id="randomNumbers"></p>
+
+        <script>
+            let primes = "";
+            let num = 2;
+            let count = 0;
+
+            while (count < 10) { 
+                let isPrime = true;
+                let i = 2;
+
+                while (i <= Math.sqrt(num)) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    i++;
+                }
+
+                if (isPrime) {
+                    primes += num + ", ";
+                    count++;
+                }
+
+                num++;
+            }
+
+            document.getElementById("primeNumbers").innerHTML = primes;
+
+            let randomText = "";
+            let j = 0;
+
+            while (j < 10) {
+                let randNum = Math.floor(Math.random() * 100); 
+                randomText += randNum + ", ";
+                j++;
+            }
+
+            document.getElementById("randomNumbers").innerHTML = randomText;
+        </script>
+    </body>
+</html>
