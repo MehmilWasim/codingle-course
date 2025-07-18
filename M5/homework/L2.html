@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Static Method with Inheritance</title>
+</head>
+<body>
+  <h2>Static Method with Inheritance</h2>
+
+  <p id="info"></p>
+
+  <script>
+
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      static displayInfo(personObj) {
+        return "Name: " + personObj.name + ", Age: " + personObj.age;
+      }
+    }
+
+    class Student extends Person {
+      constructor(name, age, grade) {
+        super(name, age); 
+        this.grade = grade;
+      }
+
+      static displayFullInfo(studentObj) {
+        return Person.displayInfo(studentObj) + ", Grade: " + studentObj.grade;
+      }
+    }
+
+    let student1 = new Student("Ayesha", 18, "10th");
+
+    document.getElementById("info").innerHTML = Student.displayFullInfo(student1);
+  </script>
+</body>
+</html>
